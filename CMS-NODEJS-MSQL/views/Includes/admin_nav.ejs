@@ -1,0 +1,108 @@
+<aside id="sidebar-wrapper">
+
+    <div class="sidebar-brand bg-success">
+        <h2></h2>
+    </div>
+
+    <ul class="sidebar-nav">
+        <li class="<% if (page_name === 'overview') { %>
+            dropdown active
+            <%} else { %>
+            dropdown
+            <% } %>">
+            <a class="ddbtn" href="/admin/dashboard"><i class="fa fa-home"></i>Главная</a>
+        </li>
+        <li class="<% if (page_name === 'profile') { %>active<% } %>">
+            <a href="/admin/profile"><i class="fa fa-id-card"></i>Профиль</a>
+        </li>
+
+        <li class="<% if (page_name === 'staff') { %>
+            dropdown active
+            <%} else { %>
+            dropdown
+            <% } %>">
+            <a class="ddbtn" href="#"><i class="fa fa-chalkboard-teacher"></i>Преподаватели</a>
+            <div class="dropdown-content">
+                <a href="/admin/addStaff">Добавить преподавателя</a>
+                <a href="/admin/getStaff">Параметры преподавателей</a>
+            </div>
+        </li>
+
+
+        <li class="<% if (page_name === 'students') { %>
+            dropdown active
+            <%} else { %>
+            dropdown
+            <% } %>">
+            <a class="ddbtn" href="#"><i class="fa fa-book-reader"></i>Студенты</a>
+            <div class="dropdown-content">
+                <a href="/admin/addStudent">Добавить студента</a>
+                <a href="/admin/getStudent">Параметры студентов</a>
+            </div>
+        </li>
+
+        <li class="<% if (page_name === 'courses') { %>
+            dropdown active
+            <%} else { %>
+            dropdown
+            <% } %>">
+            <a class="ddbtn" href="#"><i class="fa fa-award"></i>Дисциплины</a>
+            <div class="dropdown-content">
+                <a href="/admin/addCourse">Добавить дисциплину</a>
+                <a href="/admin/getCourse">Параметры дисциплин</a>
+            </div>
+        </li>
+
+        <li class="<% if (page_name === 'classes') { %>
+            dropdown active
+            <%} else { %>
+            dropdown
+            <% } %>">
+            <a class="ddbtn" href="#"><i class="fa fa-chalkboard"></i>Группы</a>
+            <div class="dropdown-content">
+                <a href="/admin/addClass">Добавить группу</a>
+                <a href="/admin/getClass">Параметры групп</a>
+            </div>
+        </li>
+
+        <li class="<% if (page_name === 'depts') { %>
+            dropdown active
+            <%} else { %>
+            dropdown
+            <% } %>">
+            <a class="ddbtn" href="#"><i class="fa fa-school"></i>Факультеты</a>
+            <div class="dropdown-content">
+                <a href="/admin/addDept">Добавить факультет</a>
+                <a href="/admin/getDept">Параметры факультетов</a>
+            </div>
+        </li>
+
+
+
+        <hr>
+        <li class="<% if (page_name === 'settings') { %>
+            dropup active
+            <%} else { %>
+                dropup
+            <% } %>">
+            <a class="ddbtn" href="#"><i class="fa fa-cog"></i>Настройки</a>
+            <div class="dropup-content">
+                <a href="/admin/info_settings">Information Settings</a>
+                <a href="/admin/password_settings">Password Settings</a>
+            </div>
+        </li>
+        <li>
+            <a href="/admin/logout"><i class="fa fa-sign-out-alt"></i>Выйти</a>
+        </li>
+    </ul>
+</aside>
+
+<div id="navbar-wrapper" style="position: fixed;">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand" id="sidebar-toggle"><i class="fa fa-bars"></i></a>
+            </div>
+        </div>
+    </nav>
+</div>
